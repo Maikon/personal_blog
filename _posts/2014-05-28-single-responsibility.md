@@ -16,7 +16,7 @@ I could relate to that straight away since my TicTacToe [submission](https://git
 
 As Sandi puts it:
 
-> because you know the order of events you can write code to do each thing and then quite deliberately string things together, one after another.
+"because you know the order of events you can write code to do each thing and then quite deliberately string things together, one after another."
 
 Then looking at my code for starting a game of TTT:
 
