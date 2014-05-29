@@ -5,7 +5,7 @@ title: "Single Responsibility."
 
 Single Responsibility.
 
-Part of the tasks that I have for this week, is to go through the first five chapters of *Practical Object-Oriented Design* or [POODR](http://www.sandimetz.com/poodr/) for short, by Sandi Metz.
+Part of the tasks that I have for this week, is to go through the first five chapters of *Practical Object-Oriented Design in Ruby* or [POODR](http://www.sandimetz.com/poodr/) for short, by Sandi Metz.
 
 It's interesting for me because I started reading the book about halfway through my course at Makers Academy and at the time, Enrique (MA's teaching wizard) suggested that I should start reading it after I graduated and had gained more experience.
 
