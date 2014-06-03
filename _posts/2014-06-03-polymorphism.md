@@ -35,7 +35,7 @@ Two ways with which Polymorphism can be applied are:
  #=> Goose quack here!
 {% endhighlight %}
 
-The `Goose` class inherits from the `Duck` class and we have two different objects that respond to the same message but return different results. In this scenario, the benefit might not be very clear but you can below why this a useful concept.
+The `Goose` class inherits from the `Duck` class and we have two different objects that respond to the same message but return different results. In this scenario, the benefit might not be very clear but you can see below why this a useful concept.
 
 ###### Duck Typing
 Often when people describe polymorphism or the general concept of it, they will say *"if it walks like a duck and it talks like a Duck, then treat it as a Duck"*.
