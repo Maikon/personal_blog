@@ -11,10 +11,9 @@ Whenever I write a piece of new code or I'm checking old pieces, I'm always on t
 
 Some ways of recognising dependencies is checking whether any of the following conditions is true:
 
----
 - If an object knows the name of another class:
 - if an object knows the name of a message it intends to send to someone other than self
-
+<br/>
 {% highlight ruby %}
  class Company
    ...
@@ -27,9 +26,8 @@ Some ways of recognising dependencies is checking whether any of the following c
 {% endhighlight %}
 
 To begin with, the `Company` class knows explicitly about the `Person` class therefore coupling itself to that class.
-Also in this scenario the `Company` class knows about a message that is not destined to itself (*get__personal__information*) but to the `Person` class. Again this creates similar coupling to what you would get in the first scenario, as now if you were to change the method *get__personal__information* in some way that would alter it's behaviour or even a simple name change, that piece of code in the `Company` class  would break.
+Also in this scenario the `Company` class knows about a message that is not destined to itself (`get_personal_information`) but to the `Person` class. Again this creates similar coupling to what you would get in the first scenario, as now if you were to change the method `get_personal_information` in some way that would alter it's behaviour or even a simple name change, that piece of code in the `Company` class  would break.<br/>
 
----
 
 - if an object knows the arguments that a message requires
 - if an object knows the order of the required arguments
@@ -112,7 +110,7 @@ class Person
 end
 {% endhighlight %}
 
-Isolating external messages here is specifically applicable to the set_employee_record method. By having a foreign method inside of it, it relies on the fact that, that method will remain stable for a good amount of time, meaning it won't change any time soon. If the result of the get_personal_information was used in conjuction with other data to generate necessary information for the `Company` object, then the ability to easily change that piece of code becomes very important. The situation can get worse by having other methods relying on that same method; duplication would ensue, amongst many other things.
+Isolating external messages here is specifically applicable to the `set_employee_record` method. By having a foreign method inside of it, it relies on the fact that, that method will remain stable for a good amount of time, meaning it won't change any time soon. If the result of the `get_personal_information` was used in conjuction with other data to generate necessary information for the `Company` object, then the ability to easily change that piece of code becomes very important. The situation can get worse by having other methods relying on that same method; duplication would ensue, amongst many other things.
 
 A solution to this problem would be to isolate that one line into a method that you can pass around wherever is needed. By doing so, you give yourself again the ability to change an important part of the code, at one specific point only:
 {% highlight ruby %}

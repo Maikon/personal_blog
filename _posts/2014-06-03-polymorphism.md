@@ -10,8 +10,8 @@ Two ways with which Polymorphism can be applied are:
 
 - Inheritance
 - Duck Typing
-
----
+<br/>
+<br/>
 
 
 ###### Inheritance example
