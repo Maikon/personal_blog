@@ -21,7 +21,7 @@ Car.new.wheel_size # Demeter is happy with this
 {% endhighlight %}
 <br/> 
 
-- **it's parameters**
+- **its parameters**
 
 {% highlight ruby %}
 class Car
@@ -57,7 +57,7 @@ end
 {% endhighlight %}  
 <br/>    
 
-- **it's direct components**
+- **its direct components**
 
 {% highlight ruby %}
 class Car
@@ -111,7 +111,7 @@ end
 {% endhighlight %}
      
 
-There's few things wrong with this method but for this post we just need to focus on the LOD. Here the Garage takes an array of cars upon initialisation. It then has a method which after looping through the array, it calculates the total price of them. The problem here lies deep in the iteration. After getting each car it access it's wheels method which would return the wheels and then it reaches even deeper by accessing the wheel's price method.
+There's few things wrong with this method but for this post we just need to focus on the LOD. Here the Garage takes an array of cars upon initialisation. It then has a method which after looping through the array, it calculates the total price of them. The problem here lies deep in the iteration. After getting each car it access its wheels method which would return the wheels and then it reaches even deeper by accessing the wheel's price method.
 
 One of the easy ways to discover whether the law is violated, is the amount of dots in method calls. The above might be a bit disguised but it could also be written like this: `cars.first.wheels.price`.
 This method has too much knowledge and it reaches too deep to get what it wants.
