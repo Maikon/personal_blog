@@ -15,7 +15,7 @@ The first test I wrote looked like this:
     RomanNumeral converter = new RomanNumeral();
     String empty = "";
     String result = converter.convert(0);
-    assertEquals("empty", result));
+    assertEquals(empty, result));
   }
 {% endhighlight %}
 
