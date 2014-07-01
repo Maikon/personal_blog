@@ -3,8 +3,6 @@ layout: post
 title: "Method Missing: Friend or Foe?"
 ---
 
-### Method Missing, Friend or Foe?
-
 In Ruby when you send a message to an object, the object will look for the first method it will find in its path and execute it. If it doesn't it will simply throw a NoMethodError:
 {% highlight ruby %}
 class Person
