@@ -149,4 +149,4 @@ Of course a small change was necessary as the above almost feels like cheating s
   }
 {% endhighlight %}
 
-And of course now the test will brake. In the next part I will show how we actual implementation looked like and explain it a bit more as it took me a while to wrap my head around. I'll explain how the stack works a bit more especially with [Linked Lists](https://en.wikipedia.org/wiki/Linked_list) using some diagrams as well. Hopefully there's plenty food for thought here until tomorrow.
+And of course now the test will brake. In the next part I will show how the actual implementation looked like and explain it a bit more as it took me a while to wrap my head around. I'll explain how the stack works a bit more especially with [Linked Lists](https://en.wikipedia.org/wiki/Linked_list) using some diagrams as well. Hopefully there's plenty food for thought here until tomorrow.
