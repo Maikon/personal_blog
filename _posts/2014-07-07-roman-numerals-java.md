@@ -3,9 +3,9 @@ layout: post
 title: "Roman Numerals in Java"
 ---
 
-Many developers when trying to learn a new language, they use a kata they're familiar with. Since I started learning Java and having done Roman Numerals several times already inRuby, I found it appropriate to use it in order to explore Java.
+Many developers when trying to learn a new language, they use a kata they're familiar with. Since I started learning Java and having done Roman Numerals several times already in Ruby, I found it appropriate to use it in order to explore Java.
 
-Below is a video of me starting the kata and stopping at the usuall point once the algorithm becomes clear and the first two special cases, 4 and 9, are in place. Below the video you will find the full implementation.
+Below is a video of me starting the kata and stopping at the usual point once the algorithm becomes clear and the first two special cases, 4 and 9, are in place. Underneath the video you will find the full implementation.
 
 <iframe width="640" height="480" src="//www.youtube.com/embed/HEh2NNuF-oE" frameborder="0" allowfullscreen></iframe>
 
