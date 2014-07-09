@@ -33,8 +33,7 @@ The first step I took was to delete the contents of `Game` class (source control
 I then reconstructed the `Game` class such that the `CliDisplay` and any reference to it was removed. The `Game` class now simply provide an interface which any other module could use. Below is the new constructor with some of the other methods:
 
 {% highlight ruby %}
-def initialize(display = CliDisplay.new, board = Board.new, computer = Computer.new)
-  @display = display
+def initialize(board = Board.new, computer = Computer.new)
   @board = board
   @computer = computer
 end
