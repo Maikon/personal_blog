@@ -3,11 +3,11 @@ layout: post
 title: "More Lambda"
 ---
 
-In yesterday's post I talked about how I used lambdas to make the game more flexible and how few interesting things came up. Before that I need to correct a mistake from yesterday where I said that the `until` loop was removed as a result. It was actually simply transferred into it's appropriate lambda.
+In yesterday's post I talked about how I used lambdas to make the game more flexible and how a few interesting things came up. Before that I need to correct a mistake from yesterday where I said that the `until` loop was removed as a result. It was instead transferred into an appropriate lambda.
 
 So some interesting things about lambdas:
 
-- it can be called in couple of various ways
+- it can be called in a couple of ways
 
 {% highlight ruby %}
 say_hi = lambda { puts 'Hi' }
@@ -19,7 +19,7 @@ say_hi.("Joe")
 #=> Hi Joe
 {% endhighlight %}
 <br/>
-- it's scope agnostic (doesn't know the environment is created in) if you store it in a constant
+- it's scope agnostic (doesn't know the environment it is created in) if you store it in a constant
 
 {% highlight ruby %}
 class Person
@@ -42,7 +42,7 @@ person.age_in_ten_years
 #=> NameError: undefined local variable or method `age' for Person:Class
 {% endhighlight %}
 
-Similarly when you at the @ symbol in front of age you get the following:
+Similarly when you use the @ symbol in front of age you get the following:
 
 
     NoMethodError: undefined method `+' for nil:NilClass
@@ -92,4 +92,4 @@ person.age_in_ten_years
 #=> 30
 {% endhighlight %}
 
-I've certainly learned some really interesting things when it comes to lambdas and there's still few question marks in my head as to why certain things act in such a way but the experience has provided me with plenty food for thought. I'll make sure I report any further findings on the matter.
+I've certainly learned some really interesting things when it comes to lambdas and there's still a few question marks in my head as to why certain things act in such a way but the experience has provided me with plenty of food for thought. I'll make sure I report any further findings on the matter.
