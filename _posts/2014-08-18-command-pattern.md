@@ -107,7 +107,7 @@ class GardenLight
   end
 
   def switch(command)
-    @switches[:command].execute
+    @switches[command].execute
   end
 end
 
