@@ -10,7 +10,7 @@ Prior to Ruby 2.0 if you wanted to have some more context with your method argum
 
 ```ruby
 def print_full_name(attrs)
-  puts "My name is #{full_name[:first]} #{full_name[:last]}"
+  puts "My name is #{attrs[:first]} #{attrs[:last]}"
 end
 	
 full_name = { first: 'Joe', last: 'Doe' }
