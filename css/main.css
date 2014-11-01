@@ -153,6 +153,10 @@ a:hover { color: #E0B43F; }
   border: none;
 }
 
+.post img {
+  width: 100%;
+}
+
 /* terminal */
 .post pre.terminal {
   border: 1px solid #000;
