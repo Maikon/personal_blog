@@ -13,8 +13,8 @@
 html, body { height: 100%; }
 
 body {
-  background-color: #A69981;
-  font: 13.34px Helvetica, Arial, sans-serif;
+  background-color: #F1FFFF;
+  font: 13.34px 'Lato', Arial, sans-serif;
   font-size: small;
   text-align: center;
 }
@@ -25,11 +25,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a { 
-  color: #8C2034;
+a {
+  color: #3B7CB8;
   text-decoration: none;
 }
-a:hover { color: #E0B43F; }
+a:hover { color: #50DFF3; }
 
 /*****************************************************************************/
 /*
@@ -46,7 +46,7 @@ a:hover { color: #E0B43F; }
 }
 
 .posts span {
-  color: #455473;
+  color: #594747;
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
 }
@@ -76,11 +76,11 @@ a:hover { color: #E0B43F; }
 }
 
 .title a {
-  color: #8C2034;
+  color: #594747;
 }
 
 .title a:hover {
-  color: #E0B43F;
+  color: #50DFF3;
 }
 
 .header a.extra {
@@ -93,12 +93,12 @@ a:hover { color: #E0B43F; }
 }
 
 .meta {
-  color: #455473;
+  color: #594747;
 }
 
 .footer {
   font-size: 80%;
-  color: #455473;
+  color: #594747;
   margin-top: 2em;
   overflow: hidden;
 }
@@ -109,11 +109,11 @@ a:hover { color: #E0B43F; }
 }
 
 .footer .contact a {
-  color: #8C2034;
+  color: #3B7CB8;
 }
 
 .footer .contact a:hover {
-  color: #F6C545;
+  color: #50DFF3;
 }
 
 .footer .rss {
@@ -135,7 +135,7 @@ a:hover { color: #E0B43F; }
 /* standard */
 .post pre {
   border: 1px solid #ddd;
-  background-color: #C2C2D7;
+  background-color: #E0EDED;
   padding: 0 .4em;
 }
 
@@ -145,7 +145,7 @@ a:hover { color: #E0B43F; }
 
 .post code {
   border: 1px solid #ddd;
-  background-color: #C2C2D7;
+  background-color: #E0EDED;
   padding: 0 .2em;
 }
 
