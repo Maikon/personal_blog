@@ -5,7 +5,7 @@ title: On a journey towards Mastery...
 
 # Shokunin
 
-Welcome to my personal site where you will find posts of the pasts as well as current. I also maintain a section where I practice the exercises from [this book](https://pragprog.com/book/bhwb/exercises-for-programmers).
+Welcome to my personal site where you will find posts from the past as well as current. I also maintain a section where I practice the exercises from [this book](https://pragprog.com/book/bhwb/exercises-for-programmers).
 
 Blogs:
 
