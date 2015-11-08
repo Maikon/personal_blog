@@ -154,7 +154,9 @@ a:hover { color: #50DFF3; }
 }
 
 .post img {
-  width: 100%;
+  width: 35%;
+  position: relative;
+  left: 31%;
 }
 
 /* terminal */
@@ -166,4 +168,23 @@ a:hover { color: #50DFF3; }
 
 .post pre.terminal code {
   background-color: #333;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    body {
+        margin: 0 1.5em;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, li {
+     margin: 1em 2em 0 .8em;
+    }
+
+    p {
+        font-size: 125%;
+        line-height: 1.8em;
+    }
 }
