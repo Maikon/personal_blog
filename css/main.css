@@ -177,36 +177,6 @@ header a.extra:hover {
   color: #ff304f;
 }
 
-.footer {
-  font-size: 80%;
-  color: #594747;
-  margin-top: 2em;
-  overflow: hidden;
-}
-
-.footer .contact {
-  float: left;
-  margin-right: 3em;
-}
-
-.footer .contact a {
-  color: #3B7CB8;
-}
-
-.footer .contact a:hover {
-  color: #50DFF3;
-}
-
-.footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
-
-.footer .rss img {
-  border: 0;
-}
-
 /*****************************************************************************/
 /*
 /* Posts
