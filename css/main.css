@@ -13,23 +13,28 @@
 html, body { height: 100%; }
 
 body {
-  background-color: #F1FFFF;
+  background-color: #fff;
   font: 13.34px 'Lato', Arial, sans-serif;
   font-size: small;
   text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+    font-size: 100%;
+    clear: both;
+}
 
-h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
+p {
+    margin: 1em 0;
+    clear: both;
+}
 
 a {
-  color: #3B7CB8;
+  color: #118df0;
   text-decoration: none;
+  clear: both;
 }
-a:hover { color: #50DFF3; }
+a:hover { color: #53cdd8; }
 
 /*****************************************************************************/
 /*
@@ -39,6 +44,7 @@ a:hover { color: #50DFF3; }
 .posts {
   list-style-type: none;
   margin-bottom: 2em;
+  clear: both;
 }
 
 .posts li {
@@ -46,9 +52,74 @@ a:hover { color: #50DFF3; }
 }
 
 .posts span {
-  color: #594747;
+  color: #ff304f;
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
+}
+
+.site h2 {
+    color: #0e2f56;
+    font-size: 1.2em;
+}
+
+/*****************************************************************************/
+/*
+/* Navigation
+/*
+/*****************************************************************************/
+
+header .title-subtitle {
+    width: 300px;
+    float: left;
+    height: 95px;
+}
+
+header ul li {
+    list-style: none;
+    margin: 0px 10px;
+}
+
+header ul {
+    margin-left: 20%;
+}
+
+nav {
+    float: left;
+}
+
+header ul li {
+    float: left;
+}
+
+.icon {
+    background-repeat: no-repeat;
+    background-size: 44px 44px;
+    width: 44px;
+    height: 44px;
+}
+
+.icon.github {
+    background-image: url("/assets/github_dark.png");
+}
+
+.icon.github:hover {
+    background-image: url("/assets/github_hover_light.png");
+}
+
+.icon.twitter {
+    background-image: url("/assets/twitter_dark.png");
+}
+
+.icon.twitter:hover {
+    background-image: url("/assets/twitter_hover_light.png");
+}
+
+.icon.rss {
+    background-image: url("/assets/rss_dark.png");
+}
+
+.icon.rss:hover {
+    background-image: url("/assets/rss_hover_light.png");
 }
 
 /*****************************************************************************/
@@ -58,42 +129,52 @@ a:hover { color: #50DFF3; }
 /*****************************************************************************/
 
 .site {
-  font-size: 115%;
+  font-size: 120%;
   text-align: justify;
-  max-width: 42em;
+  /* max-width: 42em; */
+  max-width: 60em;
   margin: 3em auto 2em;
   line-height: 1.5em;
 }
 
-.header a {
+header a {
   font-weight: bold;
   text-decoration: none;
 }
 
 .title {
   display: inline-block;
-  margin-bottom: 2em;
+  font-size: 3em;
 }
 
 .title a {
-  color: #594747;
+  color: #0e2f56;
+}
+
+.title-subtitle h3 {
+  font-size: 1em;
+  color: #0e2f56;
 }
 
 .title a:hover {
-  color: #50DFF3;
+  /* color: #50DFF3; */
 }
 
-.header a.extra {
+header a.extra {
   color: #aaa;
   margin-left: 1em;
 }
 
-.header a.extra:hover {
+header a.extra:hover {
   color: #000;
 }
 
+.category {
+    margin: 0px;
+}
+
 .meta {
-  color: #594747;
+  color: #ff304f;
 }
 
 .footer {

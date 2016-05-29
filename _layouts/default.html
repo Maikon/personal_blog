@@ -17,10 +17,19 @@
     <body>
 
         <div class="site">
-          <div class="header">
-            <h5><a href="http://maikon.github.io/feed.xml">RSS Feed</a></h5>
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-          </div>
+          <header>
+            <div class="title-subtitle">
+              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+              <h3>A journey towards Mastery</h3>
+            </div>
+            <nav>
+              <ul>
+                <a href="https://github.com/maikon"><li class="icon github" title="Icon made by http://www.flaticon.com/authors/freepik from www.flaticon.com"></li></a>
+                <a href="https://twitter.com/makisotman"><li class="icon twitter" title="Icon made by http://www.flaticon.com/authors/elegant-themes from www.flaticon.com"></li></a>
+                <a href="http://maikon.github.io/feed.xml"><li class="icon rss" title="Icon made by http://www.flaticon.com/authors/icomoon from www.flaticon.com"></li></a>
+              </ul>
+            </nav>
+          </header>
 
           {{ content }}
 
