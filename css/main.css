@@ -87,6 +87,10 @@ nav {
     float: left;
 }
 
+nav ul {
+    width: 100%;
+}
+
 header ul li {
     float: left;
 }
@@ -94,6 +98,8 @@ header ul li {
 .icon {
     background-repeat: no-repeat;
     background-size: 44px 44px;
+    -webkit-background-size: 44px 44px;
+    -webkit-background-repeat: no-repeat;
     width: 44px;
     height: 44px;
 }
@@ -234,8 +240,31 @@ header a.extra:hover {
      margin: 1em 2em 0 .8em;
     }
 
+    div.title-subtitle {
+        width: 100%;
+        text-align: center;
+    }
+
+    h1.title {
+        margin: 0px;
+    }
+
     p {
         font-size: 125%;
         line-height: 1.8em;
+    }
+
+    nav {
+        width: 85%;
+        margin-bottom: 20px;
+    }
+
+    .icon {
+        background-repeat: no-repeat;
+        background-size: 52px 52px;
+        -webkit-background-size: 52px 52px;
+        -webkit-background-repeat: no-repeat;
+        width: 52px;
+        height: 52px;
     }
 }
