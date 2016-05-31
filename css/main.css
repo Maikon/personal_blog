@@ -234,10 +234,11 @@ header a.extra:hover {
 
     body {
         margin: 0 1.5em;
+        font-size: .6em;
     }
 
     h1, h2, h3, h4, h5, h6, p, li {
-     margin: 1em 2em 0 .8em;
+        margin: 1em 2em 0 .8em;
     }
 
     div.title-subtitle {
@@ -252,6 +253,10 @@ header a.extra:hover {
     p {
         font-size: 125%;
         line-height: 1.8em;
+    }
+
+    p.category {
+        margin: 0 .8em;
     }
 
     nav {
