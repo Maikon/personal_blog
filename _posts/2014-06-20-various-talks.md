@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Various Talks"
-category: post
+category: blog
 ---
 
 Once again I failed to allocate the right amount of time to write a more technical post but instead I will share some talks which I personally found, and still find, very useful.

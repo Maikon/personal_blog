@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A bit of Lamb(da)"
-category: post
+category: blog
 ---
 
 Today I was working on my GUI and one of my goals was reducing the complexity of the method that was in control of which game was to be played, while at the same time making it more flexible to change. Because I had never used the Qt framework prior to this project and my knowledge in terms of event-based programming was limited, the first version of the `play` method looked like this:

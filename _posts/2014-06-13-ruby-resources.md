@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Ruby Resources"
-category: post
+category: blog
+tag:
+- ruby
 ---
-
-Ruby resources for Practise
 
 Due to time constraints or rather bad time management from my part, I didn't get a chance to write a post on a specific subject. Nevertheless I'll share some Ruby resources that come handy when practising different things in the language.
 

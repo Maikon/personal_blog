@@ -1,11 +1,15 @@
 ---
 layout: post
 title: "Pairing using Tmux and SSH"
-category: post
+category: blog
+tag:
+- tmux
+- pair programming
+- vim
 ---
 
-[Tmux](http://tmux.sourceforge.net/) is a new tool I've started using since joining 8th Light as it's an extremely efficient way of boosting your workflow and manage your various projects. Tmux stands for terminal multiplexer. What does this mean? 
-Tmux page: 
+[Tmux](http://tmux.sourceforge.net/) is a new tool I've started using since joining 8th Light as it's an extremely efficient way of boosting your workflow and manage your various projects. Tmux stands for terminal multiplexer. What does this mean?
+Tmux page:
 
 *It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal. And do a lot more.*
 
@@ -19,7 +23,7 @@ These are some resources for Tmux that should be helpful:
 
 Tmux really shines when it comes to pairing though. Yesterday I paired with Uku and we did it over a secure [ssh](http://www.openssh.com/) connection and using a pretty sweet gem called [github-auth](https://github.com/chrishunt/github-auth). We set it up in such a way that Uku could login on my machine and see exactly what I was seeing on my screen and do work on it as if he was using my computer. One specific benefit of this is the fact that Uku could use his own vim configuration and general setup so this removes the barrier of getting used to someone's else setup when pairing.
 
-###### Setup
+#### Setup
 
 To install tmux and assuming you have [Homebrew](http://brew.sh/) installed, all you need to do is head over to the terminal and run `brew install tmux`.
 

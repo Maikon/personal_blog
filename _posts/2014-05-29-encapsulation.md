@@ -1,10 +1,14 @@
 ---
+title: "Encapsulation"
 layout: post
-title: "Encapsulation."
-category: post
+tag:
+- software design
+- Cohesion
+- Coupling
+category: blog
 ---
 
-It's only day 3 in my apprenticeship but I'm already aware of the amount of work that I need to go through, in order to reach the level that I'm expected to reach. It's exciting and alarming at the same time but in a good way. 
+It's only day 3 in my apprenticeship but I'm already aware of the amount of work that I need to go through, in order to reach the level that I'm expected to reach. It's exciting and alarming at the same time but in a good way.
 
 Because of that I've started experimenting with different productivity tips that I found in order to maximise my daily input and output. Since last night, I started making a short list of things (3-4 max) that I need to achieve during the next day and possible ways of trying to tackle them.
 
@@ -27,11 +31,11 @@ To my understanding and in a nutshell, Cohesion is about how closely related are
     def winning_combinations
       rows + columns + diagonals
     end
-    
+
     def rows
       grid.each_slice(3).to_a
     end
-  
+
     def columns
       rows.transpose
     end
@@ -52,21 +56,21 @@ Take the above code for example. Is there a need for other classes to know about
     def winning_combinations
       rows + columns + diagonals
     end
-  
+
     private
-  
+
     def rows
       grid.each_slice(3).to_a
     end
-  
+
     def columns
       rows.transpose
     end
     ....
   end
 {% endhighlight %}
--------------------  
--------------------  
+-------------------
+-------------------
 {% highlight ruby %}
   # before private
   Board.new.rows
@@ -75,7 +79,7 @@ Take the above code for example. Is there a need for other classes to know about
   Board.new.rows
   #=> NoMethodError: private method...
 {% endhighlight %}
-  
+
 By doing so you're restricting access to those methods, only allowing access from within the class itself. In this way no third parties can manipulate and corrupt the structure of your object. If someone was to try accessing the above two, they would simply get an error. There are other benefits as well but I'd need another post to explain each one, so that's for another time.
 
-There's more things I'd like to write about (recognising dependencies, solutions etc) but I must remain disciplined in order to keep these posts short. All in all though it was a good day and apart from the usual rabbit hole I fall whenever I chase Vim related material, I did complete the task list. 
+There's more things I'd like to write about (recognising dependencies, solutions etc) but I must remain disciplined in order to keep these posts short. All in all though it was a good day and apart from the usual rabbit hole I fall whenever I chase Vim related material, I did complete the task list.

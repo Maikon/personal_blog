@@ -1,9 +1,12 @@
 ---
 layout: post
-title: "The Law of Demeter."
-category: post
+title: "The Law of Demeter"
+category: blog
+tag:
+- software design
+- demeter
+- ruby
 ---
-### The Law of Demeter
 
 The Law of Demeter states that a method of an object should invoke only the methods of the following objects:
 
@@ -20,13 +23,13 @@ end
 Car.new.wheel_size # Demeter is happy with this
 #=> 10
 {% endhighlight %}
-<br/> 
+<br/>
 
 - **its parameters**
 
 {% highlight ruby %}
 class Car
-...     
+...
   def total_wheels_price(wheel)
     wheel.price * 4 # Demeter is happy with this too
   end
@@ -40,11 +43,11 @@ Class Wheel
   ...
 end
 
-car = Car.new 
+car = Car.new
 car.total_wheels_price(Wheel.new)
 #=> 40
 {% endhighlight %}
-<br/>    
+<br/>
 
 - **any object it creates/instantiates**
 
@@ -55,19 +58,19 @@ def wheel_perimeter
   wheel = Wheel.new
   3.14 * wheel.size # Happy here too
 end
-{% endhighlight %}  
-<br/>    
+{% endhighlight %}
+<br/>
 
 - **its direct components**
 
 {% highlight ruby %}
 class Car
   attr_reader :wheel
-  
+
   def initialize(wheel)
     @wheel = wheel
   end
-  
+
   def wheel_size
     wheel.size # Demeter is happy with this too
   end
@@ -81,7 +84,7 @@ Class Wheel
   ...
 end
 
-car = Car.new(Wheel.new) 
+car = Car.new(Wheel.new)
 car.wheel_size
 #=> 10
 {% endhighlight %}
@@ -91,11 +94,11 @@ The advantages of following the law are significant. The classes that result fro
 {% highlight ruby %}
 class Garage
   attr_reader :cars
-  
+
   def initialize(cars)
     @cars = cars
   end
-  
+
   def total_price_of_cars
     total = 0
     cars.each do |car|
@@ -110,7 +113,7 @@ class Garage
   end
 end
 {% endhighlight %}
-     
+
 
 There's few things wrong with this method but for this post we just need to focus on the LOD. Here the Garage takes an array of cars upon initialisation. It then has a method which after looping through the array, it calculates the total price of them. The problem here lies deep in the iteration. After getting each car it access its wheels method which would return the wheels and then it reaches even deeper by accessing the wheel's price method.
 
@@ -134,7 +137,7 @@ class Garage
   def total_price_of_cars
     total = 0
     cars.each do |car|
-      # some code 
+      # some code
         total += car.total_wheels_price  # Demeter happy mode back on
       # more code
     end

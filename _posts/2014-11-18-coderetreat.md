@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Global Coderetreat Day"
-category: post
+category: blog
 ---
 
 This past Saturday it was the [Global Day of

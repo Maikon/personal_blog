@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Handling the right Exceptions"
-category: post
+category: blog
 ---
 
 In the last couple of weeks I was tasked with re-arranging the structure of my ruby TTT game using some design patterns and architectural principles. The goal was to better understand these principles and where they might be useful as well as where they might not. During the process I also learned other things which don't necessarily fall under the above categories and it's one of those things that I will be writing about in this post.
@@ -16,7 +16,7 @@ When I was writing the CLI version of my Game, I wanted to deal with the situati
 module CLI
   class Game
     ...
-		
+
     def start
 	  begin
 	    set_game_choice
@@ -27,7 +27,7 @@ module CLI
 	    print_farewell_message
 	  end
     end
-		
+
 	...
   end
 end
@@ -37,9 +37,9 @@ Now the problem with this for anyone who doesn't know about Exceptions in Ruby c
 
 ## Hiding API changes
 
-Rescuing the parent class automatically meant that I was rescuing all of it's children too and one of the first instances that I noticed something was wrong was when I made changes to the core API that was used by `CLI::Game`. 
+Rescuing the parent class automatically meant that I was rescuing all of it's children too and one of the first instances that I noticed something was wrong was when I made changes to the core API that was used by `CLI::Game`.
 
-For example the `play_game` method was using the `next_player_makes_move` method from the core `Game` class. The original method took a display argument like so `next_player_makes_move(display)`. When I changed the core gem and removed the display argument, I was expecting to see that change breaking at least couple of tests in the `CLI::Game` with the classic `ArgumentError`. 
+For example the `play_game` method was using the `next_player_makes_move` method from the core `Game` class. The original method took a display argument like so `next_player_makes_move(display)`. When I changed the core gem and removed the display argument, I was expecting to see that change breaking at least couple of tests in the `CLI::Game` with the classic `ArgumentError`.
 
 "Naturally" the tests were green and I was baffled. It might of been the time of the day that I was writing the code but I couldn't understand how it didn't complain about the change in the signature of the method. A glance at the diagram above though and the answer is fairly obvious. Since the display argument was not used at all in the body of the method, the code still worked fine and when the `ArgumentError` was raised, it was rescued by the block in the `start` method and life was back to "normal".
 
@@ -47,7 +47,7 @@ This meant that any future changes made that would or could break the
 system, would go undetected and only show up when things went really
 wrong. Hours or days could be lost trying to figure out the problem.
 
-## Hiding wrong test setup
+#### Hiding wrong test setup
 
 Another result of the above exception handling was the fact that couple of my tests were broken but again they were showing up green. The issue was the setup code the tests were using. One of the tests can be seen below:
 
@@ -73,7 +73,7 @@ def play_another_round
 end
 ```
 
-As soon as I changed the exception I was catching to the appropriate `Interrupt` then the above test went in the red. The reason? After the board was reset, the `start` method was being called again so I was running the whole sequence again. At the top in the `set_game_choice` method the input stream was receiving the wrong stuff which resulted in a `NoMethodError` for the `Nil` class. 
+As soon as I changed the exception I was catching to the appropriate `Interrupt` then the above test went in the red. The reason? After the board was reset, the `start` method was being called again so I was running the whole sequence again. At the top in the `set_game_choice` method the input stream was receiving the wrong stuff which resulted in a `NoMethodError` for the `Nil` class.
 
 Again looking at the exceptions hierarchy `NoMethodError`'s main ancestor is `Exception`. The test was happy as soon as the board was reset so when the exception was thrown the rescue block caught it and everything was supposedly good even though my setup was wrong.
 
@@ -82,14 +82,14 @@ Having the wrong setup leads to the wrong tests and that inevitably leads to the
 #### Summary
 
 I was lucky and caught the mistake I made early on. By making the changes to the public api of the gem, I was expecting the `CLI::Game` to break and when it didn't, it became obvious there was a problem. My program is fairly small compared to most programs out in the wild so I can only imagine the plethora of issues the above scenario would cause to a system much larger. When dealing with exceptions, catching the right one becomes priority number one. In Ruby if you are not sure about the different ones, have a look at the diagram I link to above. Another way is catching the exception and checking its ancestors:
-	
+
 ```ruby
 begin
 # some code
 rescue Interrupt => e
   puts e.class.ancestors
 end
-	
+
 #=> SignalException
 #=>	Exception
 #=>	Object

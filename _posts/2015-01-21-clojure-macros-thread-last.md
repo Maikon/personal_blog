@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Clojure Macros: ->> (Thread-Last)"
-category: post
+category: blog
 ---
 
 One of the most popular features and advantages of Clojure or any

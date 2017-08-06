@@ -1,7 +1,11 @@
 ---
 layout: post
 title: "Expectations"
-category: post
+category: blog
+tag:
+- ruby
+- testing
+- tdd
 ---
 
 I personally correlate my ability to write good quality code with my ability to write good tests. For my code to improve, my testing must improve first. Writing the best possible tests in a given scenario will lead to writing the best possible code. Nothing more, nothing less.

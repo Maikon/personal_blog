@@ -2,3 +2,4 @@ _site
 _posts/2014-05-26-welcome-jekyll.markdown
 _drafts
 .DS_Store
+.sass-cache

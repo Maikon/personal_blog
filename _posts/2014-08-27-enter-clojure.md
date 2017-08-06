@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "Enter Clojure"
-category: post
+category: blog
+tag:
+- clojure
+- functional
 ---
 
 Some of the stories that I've been working on this past week, involved an API which was written in [Clojure](http://clojure.org/). My only previous encounter with the language came in the form of [koans](https://github.com/functional-koans/clojure-koans) so it was quite challenging looking at actual code that was designed to do certain things.
@@ -39,13 +42,13 @@ Another feature in Clojure that I find fascinating is multi-variadic functions:
 ;; "Without arguments!"
 
 (multi-variadic 1 2)
-;; "The result of adding 1 and 2 is: 3" 
+;; "The result of adding 1 and 2 is: 3"
 
 (multi-variadic 1 2 3)
 ;; "Adding three arguments is: 6"
 {% endhighlight %}
 
-In the above we create a function called `multi-variadic` which has 3 different [signatures](https://en.wikipedia.org/wiki/Signature_(computer_science)).  When the function is called with no arguments, it will use the first signature and simply return the string `"Without arguments!"`. When given two arguments, it will use the second signature and execute the relevant function which in turn has two functions inside of it (*stay with me*). One for adding the two arguments `(+ one two)` and another one which constructs the string `(str "The result of adding "one " and " two " is: " (+ one two))`. The `str` function in this case essentially takes 6 arguments; 3 strings, 2 numbers and a function which then evaluates to a number: 
+In the above we create a function called `multi-variadic` which has 3 different [signatures](https://en.wikipedia.org/wiki/Signature_(computer_science)).  When the function is called with no arguments, it will use the first signature and simply return the string `"Without arguments!"`. When given two arguments, it will use the second signature and execute the relevant function which in turn has two functions inside of it (*stay with me*). One for adding the two arguments `(+ one two)` and another one which constructs the string `(str "The result of adding "one " and " two " is: " (+ one two))`. The `str` function in this case essentially takes 6 arguments; 3 strings, 2 numbers and a function which then evaluates to a number:
 
 - "The result of adding "
 - one
@@ -55,6 +58,6 @@ In the above we create a function called `multi-variadic` which has 3 different 
 - (+ one two)
 
 
-`str` is another interesting function but i'll leave that for another time.  The fact that you can have one function that will yield different results depending on the arguments given to it, is quite impressive at least for me and my small knowledge of languages.  I could probably think of way of doing something similar in Ruby but it would probably involve see some kind of if statement and possibly a decent amount of duplication in the body of the function but Clojure deals with it quite elegantly. 
+`str` is another interesting function but i'll leave that for another time.  The fact that you can have one function that will yield different results depending on the arguments given to it, is quite impressive at least for me and my small knowledge of languages.  I could probably think of way of doing something similar in Ruby but it would probably involve see some kind of if statement and possibly a decent amount of duplication in the body of the function but Clojure deals with it quite elegantly.
 
 Even though I'm fairly new to Clojure and the syntax being unusual, I have to admit that I kind of like it. There's something "clear" about seeing and thinking in terms of pure functions that produce the same result every time you call them. I definitely look forward learning more as I go.

@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "To Teach is to Learn"
-category: general
+category: blog
+tag:
+- teaching
+- learning
 ---
 
 _This post appeared originally on [8th Light's Blog](https://8thlight.com/blog/makis-otman/2016/08/16/to-teach-is-to-learn.html)._

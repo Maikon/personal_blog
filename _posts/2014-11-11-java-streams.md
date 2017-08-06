@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Working with the Java Stream API"
-category: post
+category: blog
 ---
 
 Having been doing most of my work in the last few weeks in Java, one of the things I missed the most from Ruby was the [Enumerable](http://www.ruby-doc.org/core-2.1.4/Enumerable.html) module. This was especially the case when working with TTT.

@@ -1,10 +1,12 @@
 ---
 layout: post
 title: "Open-Closed Principle"
-category: post
+category: blog
+tag:
+- software design
+- ocp
+- solid
 ---
-
-### Open-Closed Principle.
 
 Today after lunch we were given a short talk by Daniel, a fellow apprentice, on the [Open-Closed Principle](http://en.wikipedia.org/wiki/Open/closed_principle), otherwise known as the 'O' in the [SOLID](http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) set of principles which act as a guideline for good OO code.
 
@@ -23,8 +25,8 @@ class RunningShoes
     end
   end
 end
-{% endhighlight %} 
-    
+{% endhighlight %}
+
 The above method violates the OCP principle by having a concrete object (Nike) inside of it. By doing so it's not closed for modification since If I want to check the shoes of another brand, I'd have to go inside the method and change things around  (not open to extension).
 
 Solution:
@@ -37,7 +39,7 @@ class RunningShoes
     end
   end
 end
-{% endhighlight %}   
+{% endhighlight %}
 
 This version on the other hand is. By using [duck typing](https://en.wikipedia.org/wiki/Duck_typing), I can get the list of any brand I wish as long as that class responds to the `barefoot_list` method accordingly.
 

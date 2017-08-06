@@ -1,7 +1,12 @@
 ---
 layout: post
 title: "Better Testing (part 2)"
-category: post
+category: blog
+tag:
+- rspec
+- ruby
+- tdd
+- test doubles
 ---
 
 Continuing from the post yesterday, I'll show another key aspect of my program where I was having a hard time testing it, which in this scenario means committing the ultimate sin and not testing it, and how I managed to test it efficiently this time around.
@@ -18,7 +23,7 @@ class Game
     end
     board.mark_position(move, board.current_mark)
   end
-  
+
   def start
     display.greet_players
     until board.game_over?
@@ -31,7 +36,7 @@ class Game
   ...
 end
 {% endhighlight %}
-    
+
 The part that I struggled with the most was how to test that the while conditional would respond appropriately depending on the input and execute the correct thing inside of it. The same applied to the until loop.
 
 Like I mentioned yesterday, the methods that are sent to `display`, are part of the class that deals with all the `puts` and `gets` in this situation.
@@ -48,7 +53,7 @@ Starting fresh and with the above in mind, the resulting tests looked like this:
   let(:input)   { StringIO.new("1\n2\n") }
   let(:display) { CliDisplay.new(output, input) }
   let(:game)    { Game.new(display, board) }
-  
+
   it 'returns true if the move is valid, false otherwise' do
     expect(game.move_valid?(1)).to eq true
     expect(game.move_valid?('x')).to eq false
@@ -81,16 +86,16 @@ Starting fresh and with the above in mind, the resulting tests looked like this:
   end
 
 {% endhighlight %}
-   
+
 Let's tackle one at a time. The first test is pretty straightforward, checking whether the `move_valid?` method is working correctly and the implementation of the method is below:
 {% highlight ruby %}
 def move_valid?(move)
   board.available_moves.include?(move)
 end
-{% endhighlight %} 
+{% endhighlight %}
 
 Having in mind the mantra that the test should not know about the internals of the method is testing, the second test achieves just that. I feed two responses to the input stream where `gets` is called and the first time I pass it an invalid move (`x`) and the second time a valid move (`2`). Then I check that the board is in the right state. It might be a bit obvious but it's worth noting the order of the responses is important, as if I did it the other way around, running the test suite would halt until input was given to it.
 
 The last two tests essentially test the same loop but for the two separate conditions that its `until` loop is checking against, a win and a draw. I pass a fixed board with some of the moves filled in already and I feed the input stream again with the right moves to simulate the scenarios as if two players where playing. Finally I check that the final board is in the right condition. The extra `n\n` in the end of the input represents a 'no' as on the last line of the method the `play_again?` method gets called which asks the player if he/she wants to play again so I prevent from starting another round and causing my tests running the game.
 
-I'm certain that the above can be improved, but going from no tests to having reliable tests was a big improvement for me personally and taught me a lot about dealing with a scenario like the above. 
+I'm certain that the above can be improved, but going from no tests to having reliable tests was a big improvement for me personally and taught me a lot about dealing with a scenario like the above.

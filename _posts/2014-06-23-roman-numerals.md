@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Roman Numerals Kata (video)"
-category: post
+category: blog
+tag:
+- kata
 ---
 
 One of my tasks for this week is to perform and record the Roman Numerals Kata in under 10min. I stopped recording as soon as I reached the algorithm since beyond that point I was simply typing in the rest of the cases.

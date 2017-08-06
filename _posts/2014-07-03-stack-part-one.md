@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "Building a simple Stack in Java. (Part 1)"
-category: post
+category: blog
+tag:
+- data structures
+- java
 ---
 
 Starting yesterday and continuing today me and Mike worked on some fun exercises with Java and one of them included building a Stack. The exercises can be found [here](http://introcs.cs.princeton.edu/java/43stack/).
@@ -48,7 +51,7 @@ The next test is the following:
   @Test
   public void anItemCanBeAddedToTheStack() {
     Stack stack = new Stack();
-    stack.push("1")    
+    stack.push("1")
     assertFalse(stack.isEmpty?())
   }
 {% endhighlight %}
@@ -76,7 +79,7 @@ Next up was the test checking that a new stack starts with a size of zero. I can
   // Additional refactoring to remove duplication
   public class StackTest() {
     private Stack stack;
-    
+
     @Before
     public void setUp() {
       stack = new Stack();

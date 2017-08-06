@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Hollywood Principle"
-category: post
+category: blog
 ---
 
 One of the things I've been learning more about recently is [callbacks](https://en.wikipedia.org/wiki/Callback_(computer_programming) and [events](https://en.wikipedia.org/wiki/Event_(computing). 

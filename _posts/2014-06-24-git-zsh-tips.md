@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "Git and Zsh tips"
-category: post
+category: blog
+tag:
+- git
+- zsh
 ---
 
 Yesterday I published my first screencast where I performed the Roman Numerals kata. At the beginning of the screencast I typed the command `tpipe` on the bottom panel which essentially opened a named pipe. I describe most of the process [here](http://maikon.github.io/2014/06/19/quicker-testing.html) so I won't go much into details.
@@ -38,7 +41,7 @@ I would attach a picture to show the output but didn't get around to confiure my
 
 Another few example aliases I have are the below:
 
-`alias -g gitc='git diff --cached'` 
+`alias -g gitc='git diff --cached'`
 
 `alias -g gitd='git diff'`
 

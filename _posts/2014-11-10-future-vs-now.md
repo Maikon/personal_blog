@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Future Flexibility Vs Current Knowledge"
-category: post
+category: blog
 ---
 
 One of the most important principles I've learned so far during my apprenticeship is that when developing software more often than not it is vital to defer important decisions until more knowledge is available. 

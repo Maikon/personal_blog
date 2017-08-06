@@ -1,49 +1,108 @@
-# Site settings
-title: Lorem Ipsum - Web Developer
-description: "A blog about lorem ipsum ..."
-baseurl: "" # for test: remove string '/space-jekyll-templa' to ''
-url: "http://victorvoid.github.io/space-jekyll-template/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
-# User settings
-username: lorem ipsum
-user_title: Lorem Ipsum - FrontEnd
-email: lorem.lorem@ipsum.com
-twitter_username: loremipsum
-github_username:  loremipsum
-gplus_username:  loremipsum
-disqus_username: loremipsum
+# main text of home
+name: Makis Otman
+bio: To teach is to learn twice
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
+# discendo discimus
+# Be the silence that listens.
+#
+
+# twitter summary info
+description: A blog about technology and stuff related
+
+# if it's an external image, update below for true
+# better with square images
+external-image: false
+picture: assets/images/profile.png
+
+# If you want to include your resume, set to true
+# and specify source (external or local).
+resume: false
+resume-external: true
+resume-url: https://google.com/?q=my+resume
+
+url: https://maikon.github.io
+# your url: http://USERNAME.github.io
+
 permalink: /:title/
 
+# To enable google analytics, supply your token below
+# analytics-google: 'UA-MYANALYTICS'
 
-# html minify
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
+# To enable piwik tracking, supply your url & site ID below
+# analytics-piwik-url: 'piwik.my-host.com'
+# analytics-piwik-id: 1
 
-# Links to include in menu navigation
-links:
-  - title: home
-    url: /
-  - title: my posts
-    url: /posts
-  - title: series
-    url: /series
-  - title: tags
-    url: /tags
-  - title: about me
-    url: /about
-# projects in header index
-projects:
-  - name: asciilang
-    url: https://github.com/victorvoid/asciilang
-  - name: vim-frontend
-    url: https://github.com/victorvoid/vim-frontend
-  - name: generator-capybara
-    url: https://github.com/victorvoid/generator-capybara 
-# exclude my node related stuff
-exclude: ['package.json', 'src', 'node_modules']
+# if you don't want comments in your posts, leave categories empty
+disqus:
+  shortname: maikon # enter this from your disqus account
+  categories: [blog, project] # only show disqus for posts that have these categories
+
+# if you don't have any of social below, comment the line
+#facebook: myfacebook
+twitter: MakisOtman
+# google: mygoogle
+# instagram: myinstagram
+# pinterest: mypinterest
+# linkedin: mylinkedin
+# youtube: myyoutube
+# spotify: myspotify
+github: Maikon
+# lastfm: mylastfm
+stackoverflow: 3029403/maikon
+# quora: userquora
+# reddit: username
+#medium: medium
+# vimeo: myvimeo
+# lanyrd: mylanyrd
+email: makisotman@gmail.com
+
+authors:
+    johndoe:
+        name: John Doe
+        bio: A Man who travels the world eating noodles
+        external-image: false
+        picture: assets/images/profile.jpg
+        twitter: johndoe
+
+# do you want a larger site? change the option below
+# options: [normal, large] | default: normal
+# normal = 560px / large = 810px
+width: normal
+
+# if you don't need pagination, comment the *paginate* configs below
+#paginate: 5
+#paginate_path: "blog/:num/"
+
+# if you don't need projects, comment the *projects* configs below
+# projects: true
+
+# if you don't need "about" or "blog", comment them out below
+about: true
+blog: true
+
+# do you want to show the "read time" of the posts?
+read-time: true
+
+# do you want to show the "tags" inside the posts?
+show-tags: true
+
+# related posts inside a post?
+related: true
+
+# Display links for next and previous posts for the specified categories
+post-advance-links: [blog]
+
+# show author block at the end of a post ?
+show-author: true
+
+# do you want some animations?
+animation: true
+
+gems:
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+jekyll-mentions:
+    base_url: https://github.com

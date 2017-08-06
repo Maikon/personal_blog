@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "Recognising Design Patterns"
-category: post
+category: blog
+tag:
+- design patterns
+- ruby
 ---
 
 Since I started my journey with 8th Light, I've been immersed in best
@@ -23,7 +26,7 @@ Universe:
 class Character
   attr_reader :name, :type, :element
   attr_accessor :rating
-  
+
   def initialize(name: name, type: type, element: element)
     @name = name
     @type = type
@@ -76,6 +79,6 @@ hero_finder.filter(filters, heroes, juggernaut)
 #=> <Hero:0x007fc404b4d2d0 @element=:strength, @name="Colossus", @rating=20, @type=:mutant>
 {% endhighlight %}
 
-The intent of the Command Pattern is to: ***"Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations".*** The `ElementFilter` and `TypeFilter` are in this instance the ***command objects***.  The `HeroeFinder` acts as the client and takes a "queue" in the form of the `filters`. I could of put an instance variable with an array inside of it so that it would be more clear but I opted for removing the state instead and pass the queue directly in the `filter` method. 
+The intent of the Command Pattern is to: ***"Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations".*** The `ElementFilter` and `TypeFilter` are in this instance the ***command objects***.  The `HeroeFinder` acts as the client and takes a "queue" in the form of the `filters`. I could of put an instance variable with an array inside of it so that it would be more clear but I opted for removing the state instead and pass the queue directly in the `filter` method.
 
 According to the definition above, this piece of code still conforms to the Command Pattern.  However patterns like [Chain of Responsibility](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern) add a level of confusion to the untrained eye (me). Despite the fact that clear differences exist, they can be tricky to see, especially if they're mixed with others. More training and practise is needed indeed.

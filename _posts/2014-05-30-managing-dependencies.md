@@ -1,7 +1,10 @@
 ---
 layout: post
-title: "Managing Dependencies."
-category: post
+title: "Managing Dependencies"
+category: blog
+tag:
+- software design
+- dependencies
 ---
 
 It's the end of week 1 of my apprenticeship but only day 4 (monday was bank holiday) and it's been an exciting first week. Being surrounded by 3 very good developers has helped me learn an incredible amount of things. Pairing with each one of them helps me learn new things, as each of them have their own unique style and approach. Of course with Jim acting as our mentor, there's some common practise in the things we learn but I got some great feedback this week from both Daniel and Uku.
@@ -42,10 +45,10 @@ Also in this scenario the `Company` class knows about a message that is not dest
    end
    ...
  end
- 
+
  class Person
    attr_reader :name, :age
-   
+
    def initialize(name, age)
      @name = name
      @age = age
@@ -67,15 +70,15 @@ In the first scenario **Dependency Injection** could be used to eliminate from t
 {% highlight ruby %}
 class Company
   attr_reader :person
-  
+
   def initialize(person)
     @person = person
   end
-  
+
   def set_employee_record
-    person.get_personal_information #=> an object that responds to the method 
+    person.get_personal_information #=> an object that responds to the method
     # some code                     #=> get_personal_information, will do
-  end 
+  end
   ...
 end
 
@@ -89,7 +92,7 @@ If we were to combine the first scenario with the second, we would have a slight
 {% highlight ruby %}
 class Company
   attr_reader :person
-  
+
   def initialize(person)
     @person = person
   end
@@ -103,7 +106,7 @@ end
 
 class Person
   attr_reader :name, :age
-  
+
   def initialize(name, age)
     @name = name
     @age = age
@@ -117,7 +120,7 @@ A solution to this problem would be to isolate that one line into a method that 
 {% highlight ruby %}
 class Company
   attr_reader :person
-  
+
   def initialize(person)
     @person = person
   end
@@ -137,7 +140,7 @@ When it comes to the arguments list, a solution for avoiding issues like passing
 {% highlight ruby %}
 class Person
   attr_reader :name, :age
-  
+
   def initialize(args)
     @name = args[:name] || 'Joe'
     @age = args[:age] || 27

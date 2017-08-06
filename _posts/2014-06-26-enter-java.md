@@ -1,13 +1,15 @@
 ---
 layout: post
 title: "Enter Java"
-category: post
+category: blog
+tag:
+- java
+- tdd
 ---
 
 One of my tasks for this week's iteration is to learn and practise the Roman Numerals Kata but in Java. It's always exciting, for me at least, whenever I get the chance to learn a new language and even more so when practising a familiar kata. In show a small sample in this post with more to come once I understand certain things better.
 
 First thing to note is with Java you more or less have to use an [IDE](https://en.wikipedia.org/wiki/Integrated_Development_Environment) and the most commonly used one is [Intellij](https://www.jetbrains.com/idea/). I got some help from Felipe to get the project going on since his background is in Java. The first thing that struck me was the amount of steps I had to go through just so the right environment was in place with the right file structure etc. Understandably the steps will be less after the initial set up but even then it's still not as easy as simply creating two files and get going as it is in Ruby or maybe it is but I just don't know it yet.
-
 
 The first test I wrote looked like this:
 {% highlight java %}
@@ -26,7 +28,7 @@ Ruby version for comparison:
     expect(RomanNumeral.convert(0)).to eq ''
   end
 {% endhighlight %}
-          
+
 After playing around and trying to understand what exactly is going on, I figured out that I could have it in one line like so:
 {% highlight java %}
   @Test
@@ -34,7 +36,7 @@ After playing around and trying to understand what exactly is going on, I figure
     assertEquals("", RomanNumeral.convert(0));
   }
 {% endhighlight %}
-                      
+
 Minimum implementation to get the above to pass:
 {% highlight java %}
   public class RomanNumeral() {
@@ -44,7 +46,7 @@ Minimum implementation to get the above to pass:
   }
 {% endhighlight %}
 <br/>
-##### Code breakdown
+#### Code breakdown
 From wikipedia [page](https://en.wikipedia.org/wiki/Java_(programming_language)):
 
 ***Public***

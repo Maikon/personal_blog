@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "More Lambda"
-category: post
+category: blog
 ---
 
 In yesterday's post I talked about how I used lambdas to make the game more flexible and how a few interesting things came up. Before that I need to correct a mistake from yesterday where I said that the `until` loop was removed as a result. It was instead transferred into an appropriate lambda.

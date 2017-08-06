@@ -1,7 +1,11 @@
 ---
 layout: post
-title: "Polymorphism."
-category: post
+title: "Polymorphism"
+category: blog
+tag:
+- software design
+- polymorphism
+- inheritance
 ---
 In today's post, I'll try and explain [Polymorphism](https://en.wikipedia.org/wiki/Polymorphism_(computer_science)). Wikipedia is generally pretty good at explaining programming concepts but sometimes it's not as friendly to beginners (me).
 
@@ -22,16 +26,16 @@ Two ways with which Polymorphism can be applied are:
      puts 'Duck quack here!'
    end
  end
- 
+
  def Goose < Duck
    def quack
      puts 'Goose quack here!'
    end
  end
- 
+
  Duck.new.quack
  #=> Duck quack here!
- 
+
  Goose.new.quack
  #=> Goose quack here!
 {% endhighlight %}
@@ -46,13 +50,13 @@ class Duck
       puts 'Duck quack here!'
     end
   end
-  
+
   def Goose
     def quack
       puts 'Goose quack here!'
     end
   end
-  
+
   [Duck.new, Goose.new].each do |object|
     object.quack
   end
@@ -60,7 +64,7 @@ class Duck
   #=> Goose quack here!
 {% endhighlight %}
 
-As I understand it, the message `quack` inside the each loop is *polymorphic*; it returns different forms(results). Sending `quack` to a `Duck` object will you get a different result(form) than sending it to a `Goose`. There's different explanations but for the code I've seen so far, the message is what would be described as polymorphic. 
+As I understand it, the message `quack` inside the each loop is *polymorphic*; it returns different forms(results). Sending `quack` to a `Duck` object will you get a different result(form) than sending it to a `Goose`. There's different explanations but for the code I've seen so far, the message is what would be described as polymorphic.
 Sandi Metz's explanation in POODR is:
 
 > Polymorphism in OOP refers to the ability of many different objects to respond to the same message. Senders of the message need not care about the class of the receiver; receivers supply their own specific version of the behaviour. A single message thus has many (poly) forms (morphs).

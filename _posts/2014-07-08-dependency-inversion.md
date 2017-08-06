@@ -1,7 +1,11 @@
 ---
 layout: post
 title: "The Dependency Inversion Principle"
-category: post
+category: blog
+tag:
+- solid
+- dip
+- software design
 ---
 
 One of the tasks I had for this week was to extract my tictactoe core functionality into a gem. There were three components that made up the core of my game: `Board`, `Computer` and `Game`.

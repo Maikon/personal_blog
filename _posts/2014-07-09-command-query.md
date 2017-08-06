@@ -1,7 +1,11 @@
 ---
 layout: post
 title: "Command-Query Separation"
-category: post
+category: blog
+tag:
+- software design
+- cqs
+- ruby
 ---
 
 The Command-Query Separation was devised by [Bertrand Meyer](https://en.wikipedia.org/wiki/Bertrand_Meyer) and it states:
@@ -17,7 +21,7 @@ class Game
   def play_next_move(input)
     board.mark_position(input, board.current_mark)
   end
-  
+
   # adheres to CQS
   def current_mark
     board.current_mark

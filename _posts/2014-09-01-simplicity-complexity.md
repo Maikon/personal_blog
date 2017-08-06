@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Simplicity == Complexity"
-category: post
+category: blog
 ---
 
 Simplicity is a very good thing, I'm definitely a fan. In all walks of life you will find the best things tend to be the simplest ones at the same time. People strive towards designing and keeping things as simple as possible and this also extends to software. It was one of the first things that we were taught at MA and one the things I keep reading everywhere; People always prefer a solution that is easier and simpler to understand than a fancy and complicated solution.

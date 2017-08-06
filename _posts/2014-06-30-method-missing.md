@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "Method Missing: Friend or Foe?"
-category: post
+category: blog
+tag:
+- ruby
+- metaprogramming
 ---
 
 In Ruby when you send a message to an object, the object will look for the first method it will find in its path and execute it. If it doesn't it will simply throw a NoMethodError:
@@ -81,4 +84,4 @@ end
 
   I must of spent a good hour or more trying to understand the above because in my mind  a method that takes arguments and doesn't get passed any arguments, it returns an `ArgumentError`. A `NoMethodError` is the last thing I would be expecting since I can see that the method exist.
 
-  I might be missing something or not know enough about the subject but surely the above does not seem right to me. I haven't looked into the source code of qtbindings yet but I would like to see the implementation that causes such a result. In the meantime I'll try and understand better the framework and hopefully avoid such pitfalls. Just like with anything `method_missing` is a great tool which if misused can cause major issues. 
+  I might be missing something or not know enough about the subject but surely the above does not seem right to me. I haven't looked into the source code of qtbindings yet but I would like to see the implementation that causes such a result. In the meantime I'll try and understand better the framework and hopefully avoid such pitfalls. Just like with anything `method_missing` is a great tool which if misused can cause major issues.

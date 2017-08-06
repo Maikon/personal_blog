@@ -1,7 +1,10 @@
 ---
 layout: post
-title: "The Command Pattern."
-category: post
+title: "The Command Pattern"
+category: blog
+tag:
+- design patterns
+- ruby
 ---
 The last couple of weeks I've been working on an internal Rails project
 and to say that I've been learning a lot it would probably be an
@@ -99,7 +102,7 @@ house_light.switch(FlipDownCommand.new(light))
 
 The "Invoker" class takes the command objects and is responsible for invoking them when needed. The "Command" objects take a "Receiver" object and invoke a method which is specific to that receiver. The "Client" is responsible for bringing those together and is generally where the decision is made on when and how a command is to be executed. Typically the Client object (`HouseLight`) passes the Command object (`FlipUpCommand`) to the Invoker object (`Switch`) which then executes the command.
 
-The reason why in Ruby is harder to see this sort of pattern is because you can dump the "Invoker" object and let the magic of Duck Typing do the rest: 
+The reason why in Ruby is harder to see this sort of pattern is because you can dump the "Invoker" object and let the magic of Duck Typing do the rest:
 
 {% highlight ruby %}
 class GardenLight
@@ -113,7 +116,7 @@ class GardenLight
 end
 
 light = Light.new
-garden_light = GardenLight.new({ ON: FlipUpCommand.new(light), 
+garden_light = GardenLight.new({ ON: FlipUpCommand.new(light),
                                  OFF: FlipDownCommand.new(light) })
 garden_light.switch(:ON)
 #=> Lights ON

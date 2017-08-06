@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Value of Constraints"
-category: post
+category: blog
+tag:
+- coderetreat
 ---
 
 This week we had the pleasure of meeting another craftsman from the Chicago Office, [Mike Ebert](http://www.8thlight.com/team/mike-ebert) who happened to be in town. Yesterday we had an interesting "exercise" with him called "Code Retreat". The idea originates from something the famous Ruby developer Corey Haines [started](http://coderetreat.org/group/organizers-hosts) which essentially is an exercise where a problem is given, usually [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life), to pairs and 45 min are allocated per session at the end of which you have to throw away the code you've written, change partner and start again. Now I didn't even mention the best part of this exercise. For each session you are given a certain constraint with which you have to operate with. There's a list [here](http://coderetreat.org/facilitating/activity-catalog) to give you an idea but the ones we were given were:

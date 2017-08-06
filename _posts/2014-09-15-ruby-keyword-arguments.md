@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ruby's Keyword Arguments"
-category: post
+category: blog
 ---
 After few weeks working with Rails, this week I'm back working on my TicTacToe game in Ruby. I have quite few things to refactor but I'm really enjoying it since I'm applying certain [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles as well as things I've learned from consuming resources on the [Hexagonal Architecture](http://alistair.cockburn.us/Hexagonal+architecture) as well as [Clean Architecture](http://blog.8thlight.com/uncle-bob/2011/11/22/Clean-Architecture.html). 
 

@@ -1,7 +1,11 @@
 ---
 layout: post
 title: "Duck Typing"
-category: post
+category: blog
+tag:
+- duck typing
+- software design
+- ruby
 ---
 
 From wikipedia:
@@ -32,7 +36,7 @@ it 'handles anything that is not a shape' do
   expect(PerimeterCalculator.new.perimeters_for(:shape)).to eq({})
  end
 {% endhighlight %}
-    
+
 This one checks to see whether the method can deal with objects that are not Shapes. What constitutes a shape? Well the first above gives an indication. Anything that responds to the `type` and `perimeter` methods, is a shape. If it quacks like a duck, it is a duck.
 
 The code that makes the above pass is this:
@@ -46,8 +50,8 @@ def perimeters_for(*shapes)
   end
   shapes_hash
 end
-{% endhighlight %}  
-  
+{% endhighlight %}
+
 Using the splat operator `*` I can take any amount of arguments as an array, so If I'm only passing in 1 item, I will get an array with a single item. The line starting with `return` checks to see whether the first item responds to the method `perimeter` and if not, it returns the empty hash. I could also write this last line as "***ask the the first object that comes through if it quacks. If it does, then it's a duck so let it through.***". This is where duck typing comes handy. The operations inside the method don't care about the incoming objects as long as they respond to the two methods they care about.
 
 An example of shapes that would qualify for the method above is the below:
@@ -57,7 +61,7 @@ class Rectangle # acts like a duck
   def type
     :rectangle
   end
-  
+
   def perimeter
     (length + width) * 2
   end
@@ -68,7 +72,7 @@ class Square # acts like a duck
   def type
     :square
   end
-  
+
   def perimeter
     side_size * 4
   end

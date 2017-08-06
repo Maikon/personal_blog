@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "Keep asking Why."
-category: post
+title: "Keep asking Why"
+category: blog
 ---
 
-### Keep asking Why.
-
-The main reason for starting this blog was for me to be "forced" to put into words whatever it is that I'm learning. Many times in the past (still happens now), I'll read or watch something, understand it at that point, but when the time comes to explain it to someone else, I'm staring at a blank board in my mind. 
+The main reason for starting this blog was for me to be "forced" to put into words whatever it is that I'm learning. Many times in the past (still happens now), I'll read or watch something, understand it at that point, but when the time comes to explain it to someone else, I'm staring at a blank board in my mind.
 
 Whenever I'm stuck with a specific problem or in general interested in learning about a principle from which I could gain an immediate benefit, I tend to do a decent amount of research. When I do find the solution to a problem that's been bothering me for a while, I tend to make it work and quite often move on to the next thing. Here lies the problem.
 
@@ -26,8 +24,8 @@ On the first question I would list the objectives of the day, usually 2-3 specif
 Example from Wikipedia:
 
 *The vehicle will not start. (the problem)*
-  
-- Why? - The battery is dead. (**first why**)  
+
+- Why? - The battery is dead. (**first why**)
 - Why? - The alternator is not functioning. (**second why**)
 - Why? - The alternator belt has broken. (**third why**)
 - Why? - The alternator belt was well beyond its useful service life and not replaced. (**fourth why**)

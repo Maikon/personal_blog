@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "Building a simple Stack in Java. (Part 2)"
-category: post
+category: blog
+tag:
+- data structures
+- java
 ---
 
 In the post yesterday we started putting together a simple Stack using Java and we stopped at the last failing test which was this:

@@ -1,18 +1,24 @@
 ---
 layout: post
 title: 'Quicker Testing with Vim and Shell script'
-category: post
+category: blog
+tag:
+- rspec
+- ruby
+- tdd
+- vim
+- unix
 ---
 
 One of the tasks for my new iteration is to perform, record and publish the roman numerals kata, in under 10 minutes. I've done the kata quite a few times but never actually try to get it under 10. I did perform it yesterday in front of the team and we clocked it at 20 but a big part of the process was getting the right setup in place.
 
 The way I usually work with Vim I have two panes, one with the tests and another one with the code I'm testing. Being a fan of [Gary Bernhardt](https://twitter.com/garybernhardt), I took some pieces from his [.dotfiles](https://github.com/garybernhardt/dotfiles) and more specifically his [.vimrc](https://github.com/garybernhardt/dotfiles/blob/master/.vimrc) file. I would highly recommend the screencast series he made at [DAS](https://www.destroyallsoftware.com/screencasts) for some really great stuff.
 
-The above is a good setup when developing solo but when giving a presentation it's ideal to have a third pane where the tests run. When doing Rails you can automate the process using a gem like guard but it would be quite an overkill to put it mildly, having to install a gem for a kata. After watching [this](https://www.destroyallsoftware.com/screencasts/catalog/running-tests-asynchronously) screencast by Gary, I saw how he emulated a similar scenario where he created a [FIFO](https://en.wikipedia.org/wiki/Named_pipe) and having that running on one pane, he sent input to it through a separate pane. 
+The above is a good setup when developing solo but when giving a presentation it's ideal to have a third pane where the tests run. When doing Rails you can automate the process using a gem like guard but it would be quite an overkill to put it mildly, having to install a gem for a kata. After watching [this](https://www.destroyallsoftware.com/screencasts/catalog/running-tests-asynchronously) screencast by Gary, I saw how he emulated a similar scenario where he created a [FIFO](https://en.wikipedia.org/wiki/Named_pipe) and having that running on one pane, he sent input to it through a separate pane.
 
 To make a FIFO you simply type the following in the terminal: `mkfifo pipe_name`. Once you create one you can open the reading end of it using `cat pipe_name`. Opening up a new pane, you can send a test message by doing the following `echo 'hello' > pipe_name` and you should see the result on the other side. What he did in the end was to have a small script like this which would keep the reading end open so he could continuously send commands. This is the little shell script he wrote:
-  
-   while true do 
+
+   while true do
      sh -c "$(cat test-commands)"
    done
 

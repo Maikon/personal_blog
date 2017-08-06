@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Useful Links."
-category: post
+title: "Useful Links"
+category: blog
 ---
 
 Today's post will be very short. Short as in a few links which I went through and are related to testing. I will be revisiting them frequently as I always pick up new things from articles like these.

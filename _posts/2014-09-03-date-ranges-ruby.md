@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Date Ranges in Ruby"
-category: post
+category: blog
 ---
 
 Yesterday me and my pairing partner came across an interesting situation. The feature we were working on involved taking in some data, constructing a date range, a year for example, and then filtering that data through that range to see which ones were within that range.

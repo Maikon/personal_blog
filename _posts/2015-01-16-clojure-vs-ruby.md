@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Clojure vs Ruby (so far)"
-category: post
+category: blog
 ---
 
 When talking with people about Clojure the words you'll hear more often

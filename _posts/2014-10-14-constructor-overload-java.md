@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Constructor Overloading in Java"
-category: post
+category: blog
 ---
 Starting this week, I'm getting hands on with Java. I had a previous encounters during my apprenticeship with couple of katas but that was simply testing the waters. Having to build TTT from scratch is more like a deep dive in the language.
 

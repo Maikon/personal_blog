@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "More interesting talks (Ruby, Testing, Functional)"
-category: post
+category: blog
 ---
 
 Since I failed to produce a meaningful technical post and not wanting to litter your screen with below-par explanations, I have opted to share some more interesting talks that Ihave watched and found interesting/thought provoking.

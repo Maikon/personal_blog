@@ -1,10 +1,12 @@
 ---
+title: Single Responsibility
 layout: post
-title: "Single Responsibility."
-category: post
+tag:
+- apprenticeship
+- SRP
+- SOLID
+category: blog
 ---
-
-Single Responsibility.
 
 Part of the tasks that I have for this week, is to go through the first five chapters of *Practical Object-Oriented Design in Ruby* or [POODR](http://www.sandimetz.com/poodr/) for short, by Sandi Metz.
 
@@ -13,7 +15,7 @@ It's interesting for me because I started reading the book about halfway through
 His advice back then is even more clear now as I've read the first two chapters again and they make a lot more sense now than what they did the first time around. Writing a considerable amount of Ruby code since then definitely had an impact on my understanding of the principles discussed.
 
 In the first chapter Sandi gives a brief introduction to two different styles of programming; Object-Oriented and Procedural.
-I could relate to that straight away since my TicTacToe [submission](https://github.com/Maikon/TicTacToe_Ruby) *suffers* from the latter, amongst other things. 
+I could relate to that straight away since my TicTacToe [submission](https://github.com/Maikon/TicTacToe_Ruby) *suffers* from the latter, amongst other things.
 
 As Sandi puts it:
 
@@ -29,7 +31,7 @@ Then looking at my code for starting a game of TTT:
   require_relative 'computer'
   require_relative 'game_interface'
   require_relative 'game_sequence'
-  
+
   human = Human.new
   board = Board.new
   cpu = Computer.new
@@ -56,16 +58,16 @@ In chapter 2 Sandi expands on the first principle of [SOLID](https://en.wikipedi
 There were many parts which I found very interesting but the one that I need to keep reminding myself to apply, is the way with which you can determine if a class has a SR or not. The following code is from the book which will illustrate the technique:
 
 {% highlight ruby %}
-  class Gear    
+  class Gear
     attr_reader :chainring, :cog, :rim, :tire
-    
+
     def initialize(chainring, cog, rim, tire)
       @chainring = chainring
     @cog = cog
     @rim = rim
     @tire = tire
     end
-    
+
     def ratio
       chainring / cog.to_f
     end
@@ -75,7 +77,7 @@ There were many parts which I found very interesting but the one that I need to 
     end
   end
 {% endhighlight %}
-  
+
 One way to determine whether the above class has one responsibility is to try to describe it in a simple sentence. If you need to use the words **or** & **and** in the sentence then it means it's doing more than one thing. i.e "Gear does X" vs "Gear does X and a bit of O".
 Another way which I hadn't thought of before until I read it in the book, is taking each method of that class and asking it as a question. The question should make sense when rephrased so for the above you could do the following:
 
@@ -104,7 +106,7 @@ Separating the above into two methods; one performing the iteration, another for
   def diameters
     wheels.collect { |wheel| diameter(wheel) }
   end
-  
+
   def diameter(wheel)
     wheel.rim + (wheel.tire * 2)
   end

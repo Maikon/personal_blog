@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "Roman Numerals in Java"
-category: post
+category: blog
+tag:
+- kata
+- java
 ---
 
 Many developers when trying to learn a new language, they use a kata they're familiar with. Since I started learning Java and having done Roman Numerals several times already in Ruby, I found it appropriate to use it in order to explore Java.

@@ -1,7 +1,12 @@
 ---
 layout: post
 title: "Better Testing (part 1)"
-category: post
+category: blog
+tag:
+- rspec
+- ruby
+- tdd
+- test doubles
 ---
 Over the weekend I started redoing tic-tac-toe from scratch with the goal of having a human-vs-human game completed. Apart from it being a task, my main motivation for doing so was that in the last attempt I discovered that I needed less code than I initially thought I did. That was due to a combination of reasons (trying to predict the future, writing more code than necessary etc). Another motivation however was the 'pain' I experienced with testing when the time came to put the pieces together in the `Game` class.
 
@@ -38,7 +43,7 @@ it 'receives input from the user for a move' do
   expect(game.receive_user_input).to eq 2
 end
 {% endhighlight %}
-    
+
 Here the test is not concerned with the how the method is implemented at all. It only cares about the return value. I stubbed the response using the `StringIO` class so whenever `gets` was called it would take the first argument which is `1\n` and on the second call will get `2\n`. To clarify how that works, here's the implementation of the `ask_for_move` method:
 {% highlight ruby %}
 def ask_for_move(mark)
@@ -46,7 +51,7 @@ def ask_for_move(mark)
   @input.gets.chomp.to_i
 end
 {% endhighlight %}
-  
+
 Now any changes I make to the internals of the method has no effect on the test, as long as it returns the same value.
 
 On the second part tomorrow I'll show how I managed to test methods that include `while` and `until` loops, again without coupling myself to the implementation. If you have any feedback on improvements or mistakes I possibly made, feel free to comment below.
