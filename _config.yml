@@ -20,7 +20,7 @@ resume: false
 resume-external: true
 resume-url: https://google.com/?q=my+resume
 
-url: https://maikon.github.io
+url: //maikon.github.io
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
