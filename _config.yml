@@ -57,12 +57,12 @@ stackoverflow: 3029403/maikon
 email: makisotman@gmail.com
 
 authors:
-    johndoe:
-        name: John Doe
-        bio: A Man who travels the world eating noodles
+    makisotman:
+        name: Makis Otman
+        bio:
         external-image: false
         picture: assets/images/profile.jpg
-        twitter: johndoe
+        twitter: makisotman
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
@@ -103,6 +103,12 @@ gems:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-analytics
 
 jekyll-mentions:
     base_url: https://makisotman.com
+
+jekyll-analytics:
+  Matomo:
+    url: makisotman.matomo.cloud
+    siteId: 1
