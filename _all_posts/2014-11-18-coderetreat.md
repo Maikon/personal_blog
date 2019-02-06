@@ -14,7 +14,7 @@ Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). What makes
 the event so fun and rewarding however, are the constraints imposed on
 each session.
 
-The 4 constraints vary and are only limited by the imagination of those 
+The 4 constraints vary and are only limited by the imagination of those
 involved. The ones that were imposed during the day were the following:
 
 - **No Primitives**
@@ -32,7 +32,7 @@ a specific problem. *"I have the concept of a Person so I need a class"*
 is an example. The code produced will reflect and satisfy that
 guideline.
 
-It's hard to imagine not doing any of the four things above in our daily 
+It's hard to imagine not doing any of the four things above in our daily
 work and that's understandable. The purpose of a Coderetreat is not to
 impose certain rules on the developer's workflow but rather show what insights
 can be retrieved by exploring the extremes of code and communication. It
@@ -46,5 +46,5 @@ also blends well with the philosophy of
 
 Below are some photos from the event:
 
-![Photo 1]({{ site.url }}/assets/gcrd.jpg)
-![Photo 2]({{ site.url }}/assets/gcrd2.jpg)
+![Photo 1](/assets/gcrd.jpg)
+![Photo 2](/assets/gcrd2.jpg)
