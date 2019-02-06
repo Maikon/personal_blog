@@ -2,7 +2,7 @@
 title: About
 layout: page
 ---
-![Profile Image]({{ site.url }}/{{ site.picture }})
+![Profile Image](https:{{ site.url }}/{{ site.picture }})
 
 <p>Crafting software at 8th Light. Avid reader
 who also enjoys good food. Member of FCBarcelona. Ever learning.</p>
