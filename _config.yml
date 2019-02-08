@@ -7,12 +7,12 @@ bio: To teach is to learn twice
 #
 
 # twitter summary info
-description: A blog about technology and stuff related
+description: Personal blog of Makis Otman
 
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/profile.png
+picture: assets/images/profile_bw.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
@@ -61,7 +61,7 @@ authors:
         name: Makis Otman
         bio:
         external-image: false
-        picture: assets/images/profile.jpg
+        picture: assets/images/profile_bw.jpg
         twitter: makisotman
 
 # do you want a larger site? change the option below
