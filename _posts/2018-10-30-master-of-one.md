@@ -20,8 +20,8 @@ assumption is a bit more bleak. This is especially true if you notice its usage 
 languages](https://en.wikipedia.org/wiki/Jack_of_all_trades,_master_of_none#In_other_languages):
 
 > Many talents is no talent
-
-> -Japanese version
+>
+> -*Japanese version*
 
 Rather ominous right?
 
