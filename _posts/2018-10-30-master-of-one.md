@@ -6,7 +6,6 @@ tag:
 - Coding
 - Debugging
 - Apprenticeship
-- Craftsmanship
 category: blog
 ---
 
