@@ -20,7 +20,7 @@ resume: false
 resume-external: true
 resume-url: https://google.com/?q=my+resume
 
-url: https://makisotman.com
+url: "" #https://makisotman.com
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
@@ -107,8 +107,3 @@ plugins:
 
 jekyll-mentions:
     base_url: ""
-
-jekyll-analytics:
-  Matomo:
-    url: makisotman.matomo.cloud
-    siteId: 1
