@@ -106,7 +106,7 @@ plugins:
   - jekyll-analytics
 
 jekyll-mentions:
-    base_url: https://makisotman.com
+    base_url: ""
 
 jekyll-analytics:
   Matomo:
