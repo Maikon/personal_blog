@@ -33,8 +33,7 @@ industry we're lucky and privileged to have many areas in which
 one can find refuge and pursue knowledge and acknowledgment. For me this
 was [Elixir](https://elixir-lang.org/).
 
-My first encounter with the language was in
-[2015](https://github.com/Maikon/elixir_ttt) and from that point onwards I
+My first encounter with the language was in 2015 and from that point onwards I
 threw myself at it. I was in my early days as a software
 developer and I was hungry to achieve things. I could feel the aura of the
 stereotype of developers as hackers that hack on things outside of work.
