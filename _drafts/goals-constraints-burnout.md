@@ -2,9 +2,6 @@
 title: Goals, Constraints and Burnout
 layout: post
 tag:
-- goals
-- burnout
-- elixir
 - personal development
 category: blog
 ---
@@ -23,7 +20,7 @@ well. When I look back at my life and more recently my career in tech I realise
 how much of this statement is true. Many of the achievements I'm most proud
 of, if not all, were all due to some constraint being in place.
 
-Over the last year or so I've been thinking a lot about why am I not as
+Over the last year or so I've been thinking a lot about why I'm not as
 productive or driven as I used to be, especially when it comes to personal
 development. Scrolling through my Twitter timeline and reading about all
 the different achievements of the people I follow amplifies this
@@ -52,16 +49,15 @@ ElixirConfEU](http://www.elixirconf.eu/events/elixirconf2017/tutorials#microserv
 At some point around the same period I was also asked to deliver training for one
 of our clients. The catch: I had 1 week to prepare. I don't
 think I've ever learned so much about a language or technology in such a
-short space. That was one of those moments where I started realising the
-power of constraints and their effect on me.
+short space.
 
-What do all the above have in common? Constraints.
+What do all of the above have in common? Constraints.
 
 The constraints were ***public commitment*** and/or a ***deadline***. Once I had committed to something, I couldn't back out. I had to complete it within the expected timeframe or at least give it my best. The alternative–letting people down–was not an option.
 
 Constraints are great because they help you focus on a target and with
 limited time you're forced to drop anything that's excess or a distraction.
-It's easy to go down to rabbit holes because they're a great place to
+It's easy to go down rabbit holes because they're a great place to
 go and procrastinate. I've done this a myriad times. Having that constraint
 of public commitment with a deadline, puts a hatch at the entrance of any
 unnecessary rabbit hole.
@@ -69,11 +65,11 @@ unnecessary rabbit hole.
 Constraints are great but they're not free. The flip side? Stress.
 
 Pushing through all those commitments in that period caused my burnout, the
-effects of which I still wonder if they're with me today.
+effects of which I feel I'm still carrying.
 
 I felt the effect of burnout the most right after we had delivered the workshop at
-ElixirConfEU. I was extremely relieved that we reached the end and
-delivered the workshop. It went well and we had great feedback. So great in
+ElixirConfEU. I was extremely relieved when we reached the end of it.
+It went well and we had great feedback. So great in
 fact that we were approached by a very established publisher of programming
 books. They wanted to create a book around the topics we covered
 and they thought we could do a good job with it. Me and my
@@ -82,14 +78,14 @@ to long before I entered the tech world.
 
 The publisher had strict deadlines (understandably so) and having just
 finished delivering a workshop that took so much out of me, the thought of
-repeating this again but with even higher intensity was terrifying. I
-informed my co-author that I couldn't do it and we eventually pulled out.
+repeating this again but with even higher intensity was terrifying. Even
+though we got positive feedback on our sample chapters, I informed my co-author that I couldn't do it and we eventually pulled out.
 As much as I would have loved to be a published author on a topic close to me,
 it was all too much.
 
 Since then I tried the complete opposite: develop skills and complete
 projects in a sustainable pace without stressing myself. Do things in
-moderation, in balance. The result? Pretty much nothing to show for.
+moderation, in balance. The result? Nothing worthy of showing.
 
 Without having some kind of constraint (public commitment, deadline, both
 etc) I find myself falling at the whims of what Tim described as "my lesser
@@ -98,26 +94,32 @@ because it provides me with ever more so rabbit holes to go and disappear
 in when the going gets tough.
 
 Procrastination is something that plagues most people especially when faced
-with something new and challenging so that's not new. What I find
+with something new and challenging. What I find
 extremely difficult is how to avoid that when there's nothing to motivate
-me to stop. Moderation doesn't work for me or at least I don't know how to
-make it work for me.
+me to stop.
 
 A perfect example where moderation with a hint of constraint still failed
 me: fitness. Signing up to a gym never motivated me to actually go. I thus
 decided to give personal training a go as a way of committing to something
 more concrete. The fact that it was expensive motivated me to show up. The
 fact that I could carry over my sessions at any week/month meant I could
-easily cancel a session if I didn't feel like it.
+easily cancel a session if I didn't feel like it. The end result was that I
+didn't make the most of it and stopped after a while.
 
 So far moderation has been nothing more than a way which I commit to things
 but with several escape hatches available through which to walk out when I feel like
 it. As I'm typing this down I realise that moderation for me is
-indistinguishable from self-motivation.
+indistinguishable from self-motivation. Moderation doesn't work for me or at least I don't know how to
+make it work for me.
 
 Having experienced the effects of burnout, it's definitely something I
 don't want to experience again. I also don't know how to motivate myself to
 achieve things without imposing constraints that push me to my limits.
+
+How do I push myself without constraints? How do I avoid neglecting
+meaningful things/interactions/relationships etc when constraints are in
+place? Maybe the issue is the amount of constrained goals in a given period
+of time? Too many => burnout?
 
 Maybe I need to embrace the fact that constraints are essential to how I
 operate as an individual. Or maybe there is a balance somewhere and I just
