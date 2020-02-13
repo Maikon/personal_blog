@@ -103,12 +103,10 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
-  - jekyll-analytics
 
 jekyll-mentions:
     base_url: https://makis.dev
 
-jekyll-analytics:
-  Matomo:
-    url: makisotman.matomo.cloud
-    siteId: 1
+redcarpet:
+  extensions: ["strikethrough"]
+rouge: true
