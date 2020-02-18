@@ -19,13 +19,13 @@ layout: compress
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400|Open+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/assets/css/prism.css" | prepend: site.baseurl }}" />
 
     <style>
      {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
      {{ scss_sheet | scssify }}
     </style>
     <script async type="text/javascript" src="https://plausible.io/js/analytics.js"></script>
-    <script src="https://assets.digitalclimatestrike.net/widget.js" async></script>
 
 </head>
 <body>
@@ -47,5 +47,6 @@ layout: compress
 
     {% include icons.html %}
 
+    <script src="{{ "/assets/js/prism.js" | prepend: site.baseurl }}"></script>
 </body>
 </html>
