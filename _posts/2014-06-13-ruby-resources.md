@@ -15,5 +15,10 @@ Here are a few:
 - [Codewars](http://www.codewars.com/)
 - [Ruby Monk](https://rubymonk.com/)
 - [Codequizzes (general not just Ruby)](http://www.codequizzes.com/)
+- [Software Programming and Coding Glossary for
+  Kids](https://www.smartadvocate.com/News/Blog/software-programming-and-coding-glossary-for-kids).
+  This is a very useful resource which has simple and clear
+  explanations of concepts that are applicable to many programming
+  languages [^1]
 
-I shall be more punctual next time...
+[^1]: Thank you Dylan for sharing this great resource!
