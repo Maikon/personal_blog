@@ -6,6 +6,14 @@ bio: To teach is to learn twice
 # Be the silence that listens.
 #
 
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      image: assets/images/blog-image.png
+
 # twitter summary info
 description: Personal blog of Makis Otman
 
