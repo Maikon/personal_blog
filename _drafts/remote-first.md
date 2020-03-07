@@ -11,6 +11,22 @@ category: blog
 image: assets/images/blog-image.png
 ---
 
+**TL;DR**
+
+- Asynchronous standups FTW
+  - catch up with others when it best suits you
+  - easy to search and find things
+  - use slack threads to discuss specific points from an update
+- Document everything
+  - communication guidelines
+  - domain knowledge (i.e system design, tech stack, tool usage etc)
+  - playbooks (i.e how to tackle issue X, how to respond to Y)
+- Encourage over-communication
+  - enables a culture of sharing
+  - people feel more comfortable asking questions
+
+---------------------------------------
+
 For the past 6 months or so I've been working at a company called
 [RailEuropeUK (formerly known as Loco2)](https://raileurope.co.uk/). A company with a *remote-first* culture.
 
@@ -27,29 +43,48 @@ of stand-ups. A couple of benefits that are often cited for doing a team
 stand up are:
 
 - Visibility: You know what other teammates are working on
-- Teamwork: You can help or receive help on a given topic
+- Teamwork: Based on the above, you can help or receive help on a given topic
 
-The above rarely worked in practice. Most of the time the stand up ended
+This rarely worked in practice. Most of the time the stand up ended
 being too long with folks (including myself) sharing all kinds of
 information (from implementation details to plans for the week etc). Not
 only was I looking forward for it to finish, by the
 end of it I had forgotten what everyone else had mentioned.
 
-Enter text-based asynchronous stand ups via Slack.
+Enter text-based asynchronous stand-up via Slack.
 
 At RailEuropeUK we have a dedicated slack channel for the engineering team
-to have our stand up. The only requirement? You post at _some point_ during
-the day. As an engineer you can choose when to post yours. Maybe you have
+to have our stand-up. The only requirement? You share yours at _some point_
+during the day. This has several benefits.
+
+#### Participate at your own pace
+
+As an engineer you can choose when to post your update. Maybe you have
 something pressing that needs to be dealt with first thing in the morning.
-You can share your standup later on. A more important trait though of this
-setup and something that I personally enjoy is the ability to catch up with
-other peoples work at _my own time_.
+In that case you can share your stand-up later in the day and that's perfectly fine.
 
-On a personal level I found none of them to be as useful
+The more important benefit of this approach comes when you're consuming the
+information. I can catch up with the updates from my colleagues _whenever
+it suits my schedule_. Similar to sharing, I get to decide at which point
+of the day I want to take a look at all the updates.
 
-     - Process, playbooks etc all defined
-     - Async standup
-     - etc
+#### Help that matters
+
+Going back to receiving or giving help on a specific topic, Slack offers a
+great tool to engage with a colleague's update: threads.
+
+Threads are a great tool because they visually don't add noise to the
+channel whilst allowing folks to engage in a discussion on a specific
+topic. This is the first time I've seen the often mentioned "help" benefit
+of a stand-up being utilised effectively.
+
+#### Retrievable information
+
+The other benefit of this approach is that I can easily search through
+Slack's history and find the information I need from a given update. This
+is *very valuable*. I found myself doing this a number of times and this can
+lead to things like creating or updating documentation with information
+taken from a discussion.
 
 
 ### Documentation as first-class citizen
@@ -105,12 +140,4 @@ good documentation: improved communication.
 Over-communication makes you a better developer, practicing your writing and
 expressing thoughts in a consise and clear manner.
 
-### Inclusive culture encouraging questions
-
-- Pairing can be done remotely
--
-
-### Remote vs Remote-first
-
-- build from the ground up
-- bolted on and not everyone is equally invested it it
+### Over-communicate. All the time.
