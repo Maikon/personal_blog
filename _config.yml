@@ -22,6 +22,7 @@ description: Personal blog of Makis Otman
 # better with square images
 external-image: false
 picture: assets/images/profile_bw.jpg
+default_picture: assets/images/profile_bw.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
@@ -60,8 +61,8 @@ email: makisotman@gmail.com
 
 authors:
     makisotman:
-        name: Makis Otman
-        bio:
+        name:
+        bio: Personal blog of Makis Otman
         external-image: false
         picture: assets/images/profile_bw.jpg
         twitter: makisotman

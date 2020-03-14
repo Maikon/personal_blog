@@ -1,5 +1,6 @@
 ---
 title: "Remote-first: An experience report"
+author: "makisotman"
 layout: post
 tag:
 - remote
