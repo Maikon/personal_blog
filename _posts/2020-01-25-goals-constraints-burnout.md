@@ -1,9 +1,11 @@
 ---
 title: Goals, Constraints and Burnout
 layout: post
+image:
 tag:
 - personal development
 category: blog
+image: assets/images/burnout.jpeg
 ---
 
 I recently read an [article by Tim
