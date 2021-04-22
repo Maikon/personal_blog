@@ -106,6 +106,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-compress-images
 
 jekyll-mentions:
     base_url: https://makis.dev
@@ -113,3 +114,9 @@ jekyll-mentions:
 redcarpet:
   extensions: ["strikethrough"]
 rouge: true
+
+imageoptim:
+  svgo: false
+
+exclude:
+  - _compress_images_cache.yml
