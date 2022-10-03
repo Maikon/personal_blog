@@ -117,6 +117,3 @@ rouge: true
 
 imageoptim:
   svgo: false
-
-exclude:
-  - _compress_images_cache.yml

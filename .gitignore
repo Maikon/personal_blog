@@ -2,3 +2,5 @@ _site
 _posts/2014-05-26-welcome-jekyll.markdown
 .DS_Store
 .sass-cache
+vendor/
+.bundle/
