@@ -123,7 +123,7 @@ end
 
 Restart the Phoenix server, visit a subdomain like http://green.fresco.com:4000/ and you should be greeted with....an error:
 
-![phoenix routing error](/assets/phoenix_controller_error.png)
+![phoenix routing error](/assets/phoenix_whitelabel_series//phoenix_controller_error.png)
 
 Remember this line `scope "/", FrescoWeb.Subdomain` in our `SubdomainRouter`? Since the requests are now scoped to a `Subdomain` namespace, our app is looking for a `PageController` in that namespace.
 
@@ -147,7 +147,7 @@ end
 
 Refresh the page in the browser. Indeed, another error greets us:
 
-![phoenix view error](/assets/phoenix_view_missing.png)
+![phoenix view error](/assets/phoenix_whitelabel_series//phoenix_view_missing.png)
 
 The error, like before, it's telling us pretty clear the next action we need to take. Since now our `Subdomain.PageController` is used, during `render` it's trying to find a `View` (`PageView`) that's under the same namespace (`Subdomain`). Create a new directory called `subdomain` under `lib/fresco_web/views/` and a new a file inside of that called `page_view.ex`:
 
@@ -166,7 +166,7 @@ end
 
 Refresh the page http://green.fresco.com:4000/ and:
 
-![phoenix view error](/assets/phoenix_template_missing.png)
+![phoenix view error](/assets/phoenix_whitelabel_series//phoenix_template_missing.png)
 
 I'm not trolling you, I promise. The reason I'm taking you on this journey is to show the "invisible" connecting dots between the different components that would otherwise be less obvious had I given you all of the code up front and skipped the step by step process.
 
@@ -208,11 +208,11 @@ Inside our new file `lib/fresco_web/templates/subdomain/page/index.html.heex` ad
 
 Refresh the page at http://green.fresco.com:4000/ and voila:
 
-![phoenix view error](/assets/phoenix_subdomain_controller_success.png)
+![phoenix view error](/assets/phoenix_whitelabel_series//phoenix_subdomain_controller_success.png)
 
 Let's refresh the other pages as well, our root domain http://fresco.com:4000/ and our other subdomain http://farm.fresco.com:4000/. You should see a great image of success:
 
-![phoenix view error](/assets/phoenix_subdomain_routing_success.png)
+![phoenix view error](/assets/phoenix_whitelabel_series//phoenix_subdomain_routing_success.png)
 
 As you can see, our root domain apart from a different greeting it also displays the additional "Help" section since it's been handled by a different controller that renders a different template.
 
