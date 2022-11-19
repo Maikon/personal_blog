@@ -12,6 +12,8 @@ category: blog
 image: assets/images/blog-image.png
 ---
 
+___This blog post originally appeared on the [Red Squirrel Blog](https://medium.com/redsquirrel-tech/create-a-multi-tenant-whitelabel-application-in-elixir-phoenix-part-i-working-with-subdomains-5d17c7556e6a).___
+
 In this series of posts of I'll explain what whitelabel, multi-tenant applications are and how a basic example of that could look like in Elixir and Phoenix.
 
 The posts in these series are:
@@ -22,19 +24,19 @@ The posts in these series are:
 
 **What is a multi-tenant application?**
 
-A multi-tenant application is an application that uses the same application and database to serve multiple tenants whilst keeping each tenant's data separated. You can think of a tenant as an account that represents a business and/or a group of people. A known example here is Slack.
+A multi-tenant application is an application that uses the same application and database to serve multiple tenants whilst keeping each tenant's data separated. You can think of a tenant as an account that represents a business and/or a group of people. A known example of such an app is Slack.
 
 **What is a whitelabel application?**
 
-A whitelabel application is a software application that uses the multi-tenant approach to allow each customer (tenant) to add their own unique customisation and branding. In this setup each tenant has their own domain through which they access the application. Some examples are Shopify and Squarespace.
+A whitelabel application is a software application that uses the above multi-tenant approach but takes it a step further by allowing each customer (tenant) to add their own unique customisation and branding. In this setup each tenant has their own domain through which they access the application. Some examples are Shopify and Squarespace.
 
 ### Architecture of a whitelabel application
 
-There are many ways one can structure an application and this is true for whitelabel applications too. Below is an example architecture diagram for what we will be building. A whitelabel application to represent software that can be used by different farmer's markets. The app will be accessible via the root domain (`fresco.com`) and by two subdomains representing two different accounts. Requests coming from the root domain will be handled by the existing router whereas requests from the subdomains will be handled by subdomain router we will create. The subdomains will also be served different pages than then root domain:
+There are many ways one can structure an application and this is true for whitelabel applications too. Below is an example architecture diagram for what we will be building. A whitelabel application to represent software that can be used by different farmer's markets. The app will be accessible via the root domain (`fresco.com`) and by two subdomains representing two different accounts. Requests coming from the root domain will be handled by the existing router whereas requests from the subdomains will be handled by subdomain router we will create. The subdomains will also be served different pages than the root domain:
 
 ![Fresco whitelabel architectural diagram](/assets/phoenix_whitelabel_series/fresco_whitelabel_diagram.png)
 
-### Let's get coding
+## Time to code
 
 The requirements for this tutorial are the following:
 
@@ -42,7 +44,7 @@ The requirements for this tutorial are the following:
 - Phoenix 1.6
 - Postgres 13
 
-For more detailed instuctions on how to get set up, see the [official Phoenix installation instructions](https://hexdocs.pm/phoenix/installation.html).
+For more detailed instructions on how to install the above, see the [official Phoenix installation instructions](https://hexdocs.pm/phoenix/installation.html).
 
 The first thing we need to do is create a new Phoenix application:
 
@@ -50,7 +52,8 @@ The first thing we need to do is create a new Phoenix application:
 mix phx.new fresco
 ```
 
-Once our application is created, run the relevant commands to set up the database and start the server:
+Once our application is created, run the relevant commands to set up the
+database and start the server in an interactive Elixir shell:
 
 ```bash
 cd fresco
@@ -66,7 +69,9 @@ Visit http://localhost:4000 and you should see the following welcome page:
 
 ### Subdomains setup
 
-Now that we have our server up and running, let's move towards making it accessible via different subdomains. For a real production environment we would need to purchase a custom domain, certificate and set up the relevant DNS records. For this tutorial we will simply modify our local network settings to simulate the effect of having a custom domain. To do so, we need to modify the `/etc/hosts` file.
+Now that we have our server up and running, let's make it accessible via
+different subdomains. For a real production environment we would need to
+purchase a custom domain, an SSL certificate and set up the relevant DNS records. For this tutorial we will simply modify our local network settings to simulate the effect of having a custom domain. To do so, we need to modify the `/etc/hosts` file.
 
 **Note**: you will likely need to use admin permissions to edit this file (`sudo vim /etc/hosts`)
 
@@ -159,10 +164,12 @@ to this:
 <h1><%= gettext "Welcome to %{name}!", name: Map.get(@conn.private, :subdomain, "fresco") %></h1>
 ```
 
-In the above snipper, we access the `@conn` variable which is available to our controllers and templates as part of Phoenix and from it we extract the value of the `:subdomain` key which is stored under the `private` map. If no value is found, we return `"fresco"` to indicate we're accessing our root domain.
+In the above snippet, we access the `@conn` variable which is available to
+our controllers and templates as part of Phoenix and from it we extract the
+value of the `:subdomain` key which is stored under another map called `private`. If no value is found, we return `"fresco"` to indicate we're accessing our root domain.
 
 Restart the server, open three new tabs and access the domains we listed above http://fresco.com:4000/, http://green.fresco.com:4000/, http://farm.fresco.com:4000/. You should see the following pages:
 
 ![phoenix_multidomain_greeting](/assets/phoenix_whitelabel_series/phoenix_multidomain_greeting.png)
 
-Awesome! Our app can now be accessed through different subdomains and displays content that's relevant to each subdomain only. Of course we have more to do here to make this more rich and dynamic but this is a great step that lays the foundations for our next article in the series. See you soon!
+Awesome! Our app can now be accessed through different subdomains and displays content that's relevant to each subdomain. Of course we have more to do here to make this more dynamic but this is a great step that lays the foundations for our next article in the series. See you soon!
